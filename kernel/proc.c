@@ -439,7 +439,7 @@ kwait2(uint64 addr, uint64 rusage_addr)
 
         havekids = 1;
         if (pp->state == ZOMBIE) {
-          // Found one.
+          
           pid = pp->pid;
           if (addr != 0 &&
               copyout(p->pagetable, p->sz, addr, (char *)&pp->xstate,
